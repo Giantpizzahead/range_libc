@@ -8,7 +8,7 @@ from cython.operator cimport dereference as deref
 USE_ROS_MAP = True
 if USE_ROS_MAP:
     from nav_msgs.msg import OccupancyGrid
-    import tf.transformations
+    import tf_transformations
 
 cdef extern from "includes/RangeLib.h":
     # define flags
@@ -124,7 +124,7 @@ def quaternion_to_angle(q):
     The angle represents the yaw.
     This is not just the z component of the quaternion."""
     x, y, z, w = q.x, q.y, q.z, q.w
-    roll, pitch, yaw = tf.transformations.euler_from_quaternion((x, y, z, w))
+    roll, pitch, yaw = tf_transformations.euler_from_quaternion((x, y, z, w))
     return yaw
 
 cdef class PyOMap:
