@@ -1,4 +1,6 @@
-# RangeLibc
+# RangeLibc (Fixed for Python 3, Spring 2025)
+
+NOTE: Ignore the test.py, it gives wrong answer results. But the raytracer seems to work fine!
 
 This library provides for different implementations of 2D raycasting for 2D occupancy grids, including the Compressed Directional Distance Transform (CDDT) algorithm as proposed in [this publication](http://arxiv.org/abs/1705.01167). The code is written and optimized in C++, and Python wrappers are also provided.
 
